@@ -17,9 +17,16 @@ export class UserAuthComponent implements OnInit {
     signupText: string;
     general: boolean;
     userType: string;
-
+    users = [
+        {
+            name: 'Vatsal Kandoi'
+        }
+    ]
     constructor (private user: UserTypeService,private page: Page, private router: Router) {
         this.page.actionBarHidden = true;
+    }
+    login() {
+        this.router.navigate(['dashboard'])
     }
     ngOnInit(): void {
         this.userType = this.user.type;

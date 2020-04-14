@@ -7,6 +7,7 @@ import { SelectorComponent } from "./default/auth/selector/selector.component";
 import { AuthComponent } from "./default/auth/auth.component";
 import { PreviousComponent } from "./default/auth/previous/previous.component";
 import { UserAuthComponent } from "./default/auth/auth/auth.component";
+import { DashboardComponent } from "./user/dashboard/dashboard.component";
 
 const routes: Routes = [
     { path: "", component: LandingComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
     { path: "auth", component: AuthComponent},
     { path: "previous", component: PreviousComponent},
     { path: "select", component: SelectorComponent},
-    { path: "login", component: UserAuthComponent}
+    { path: "login", component: UserAuthComponent},
+    { path: "dashboard", component: DashboardComponent }
 ];
 
 @NgModule({

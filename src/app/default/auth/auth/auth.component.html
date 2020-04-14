@@ -1,12 +1,15 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true">
 <!--- Instructor -->
-    <FlexboxLayout width="100%" alignItems="center" justifyContent="center" height="100%" flexDirection="column" *ngIf="userType=='instructor'">
-    <FlexboxLayout class="details-enc" width="80%" flexDirection="column">
+
+  <FlexboxLayout width="100%" alignItems="center" height="100%" flexDirection="column" *ngIf="userType=='instructor'">
+    <GridLayout class="image-enc">
       <Image src="res://logo" Dock="top" class="image"></Image>
+    </GridLayout>
+    <FlexboxLayout class="details-enc" width="80%" flexDirection="column">
       <TextField [ngClass]="{'hide': !signup}" hint="Your name" ></TextField>
       <TextField hint="you@example.com" ></TextField>
       <TextField secure="true" hint="Password" ></TextField>
-      <Button [nsRouterLink]="['dashboard']" text="{{ signupText }}" class="signup-btn" textAlignment="center" lineHeight="5"></Button>
+      <Button (onTap)="login()" text="{{ signupText }}" class="signup-btn" textAlignment="center" lineHeight="5"></Button>
     </FlexboxLayout>
     <DockLayout>
       <Label (onTap)="change()" *ngIf="signup" class="change-text" text="Already have an account? Log in" Dock="bottom"></Label>
@@ -14,6 +17,25 @@
     </DockLayout>
   </FlexboxLayout>
 <!-- Student -->
+  <FlexboxLayout width="100%" alignItems="center" justifyContent="space-between" height="100%" flexDirection="column" *ngIf="userType=='user'">
+    <GridLayout class="image-enc-user">
+      <Image src="res://logo" Dock="top" class="image"></Image>
+    </GridLayout>
+  <ScrollView orientation="vertical">
+    <FlexboxLayout width="80%" flexDirection="column">
+      <Label text="Existing users" class="heading"></Label>
+      <StackLayout *ngFor="let user of users">
+        <Label  text="{{user.name}}" class="name"></Label>
+      </StackLayout>
+    </FlexboxLayout>
+  </ScrollView>
 
+    <DockLayout width="80%">
+      <StackLayout  Dock="bottom" orientation="horizontal" class="details-enc">
+        <TextField hint="Your name" class="add-input" ></TextField>
+        <Label [nsRouterLink]="['dashboard']" text="+" class="add-btn" textAlignment="center" lineHeight="5"></Label>
+      </StackLayout>
+    </DockLayout>
+  </FlexboxLayout>
 </Page>
   

@@ -12,6 +12,7 @@ import { UserAuthComponent } from './default/auth/auth/auth.component';
 import { SelectorComponent } from "./default/auth/selector/selector.component";
 import { PreviousComponent } from "./default/auth/previous/previous.component";
 import { AuthComponent } from "./default/auth/auth.component";
+import { DashboardComponent } from "./user/dashboard/dashboard.component";
 
 @NgModule({
     bootstrap: [
@@ -32,7 +33,8 @@ import { AuthComponent } from "./default/auth/auth.component";
         UserAuthComponent,
         SelectorComponent,
         PreviousComponent,
-        AuthComponent
+        AuthComponent,
+        DashboardComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
