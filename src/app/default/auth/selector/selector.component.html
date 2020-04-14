@@ -1,3 +1,4 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true">
   <FlexboxLayout *ngIf="!selected" width="100%" justifyContent="space-between" height="100%" flexDirection="column">
     <FlexboxLayout width="100%" flexDirection="column" class="inner">
       <Image src="res://landing" class="image" ></Image>
@@ -5,7 +6,10 @@
       <Label text="We aim to help your students learn their way" class="entry-text" textWrap="true" textAlignment="center" lineHeight="5"></Label>
     </FlexboxLayout>
     <DockLayout>
-      <Button text="Get started" Dock="bottom" alignSelf="flex-end" class="button"></Button>
+      <StackLayout Dock="bottom">
+        <Button text="Login as a user" (onTap)="set('user')" class="button-1"></Button>
+        <Button text="Login as an course instructor"(onTap)="set('instructor')" class="button-2"></Button>
+      </StackLayout>
     </DockLayout>
   </FlexboxLayout>
-  <Auth *ngIf="selected"></Auth>
+</Page>

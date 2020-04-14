@@ -1,0 +1,19 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true">
+<!--- Instructor -->
+    <FlexboxLayout width="100%" alignItems="center" justifyContent="center" height="100%" flexDirection="column" *ngIf="userType=='instructor'">
+    <FlexboxLayout class="details-enc" width="80%" flexDirection="column">
+      <Image src="res://logo" Dock="top" class="image"></Image>
+      <TextField [ngClass]="{'hide': !signup}" hint="Your name" ></TextField>
+      <TextField hint="you@example.com" ></TextField>
+      <TextField secure="true" hint="Password" ></TextField>
+      <Button [nsRouterLink]="['dashboard']" text="{{ signupText }}" class="signup-btn" textAlignment="center" lineHeight="5"></Button>
+    </FlexboxLayout>
+    <DockLayout>
+      <Label (onTap)="change()" *ngIf="signup" class="change-text" text="Already have an account? Log in" Dock="bottom"></Label>
+      <Label (onTap)="change()" *ngIf="!signup" class="change-text" text="Do not have an account? Sign up" Dock="bottom"></Label>
+    </DockLayout>
+  </FlexboxLayout>
+<!-- Student -->
+
+</Page>
+  

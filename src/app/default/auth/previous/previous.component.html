@@ -1,0 +1,21 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true">
+  <FlexboxLayout width="100%" justifyContent="space-between" height="100%" flexDirection="column">
+    <DockLayout class="text-enc">
+      <Label text="Vatsal, is that you?" Dock="top" textAlignment="center" class="intro-text"></Label>
+    </DockLayout>
+    <FlexboxLayout alignItems="center" flexDirection="column" class="details">
+      <!-- <Image src="res://logo2" class="icon" ></Image> -->
+      <FlexboxLayout alignItems="center" width="20%">
+        <Label textWrap="true" textAlignment="center" class="icon-alt" text="VK"></Label>
+      </FlexboxLayout>
+      <Label text="Vatsal Kandoi" class="name-text" textWrap="true" textAlignment="center"></Label>
+      <Label text="vatsalkandoi1998@gmail.com" class="email-text" textWrap="true" textAlignment="center"></Label>
+    </FlexboxLayout>
+    <StackLayout>
+      <Button [nsRouterLink]="['dashboard']" class="login" text="Yes, It's me"></Button>
+      <Button (onTap)="nav()" class="switch" text="Switch account"></Button>
+      <Label (onTap)="nav()" textAlignment="center" text="Do not have an account? Sign up" class="signup-txt"></Label>
+    </StackLayout>
+  </FlexboxLayout>
+</Page>
+

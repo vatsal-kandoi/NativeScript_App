@@ -18,10 +18,10 @@ export class LandingComponent implements OnInit {
         // this.isFirstTime = this.storage.checkInitialOpen();
         this.isFirstTime = true;
         if (!this.isFirstTime) {
-            this.router.navigate(['/select'])
+            this.router.navigate(['/auth'])
         }
     }
     nav() {
-        this.router.navigate(['/select'])        
+        this.router.navigate(['/auth'])        
     }
 }

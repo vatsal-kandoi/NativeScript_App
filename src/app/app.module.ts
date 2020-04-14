@@ -8,7 +8,10 @@ import { NavbarComponent } from "./user/shared/navbar/navbar.component";
 import { BrowseComponent } from "./user/browse/browse.component";
 import { HomeComponent } from "./user/home/home.component";
 import { LandingComponent } from './default/landing/landing.component';
-import { AuthComponent } from './default/auth/auth.component';
+import { UserAuthComponent } from './default/auth/auth/auth.component';
+import { SelectorComponent } from "./default/auth/selector/selector.component";
+import { PreviousComponent } from "./default/auth/previous/previous.component";
+import { AuthComponent } from "./default/auth/auth.component";
 
 @NgModule({
     bootstrap: [
@@ -26,6 +29,9 @@ import { AuthComponent } from './default/auth/auth.component';
         BrowseComponent,
         HomeComponent,
         LandingComponent,
+        UserAuthComponent,
+        SelectorComponent,
+        PreviousComponent,
         AuthComponent
     ],
     schemas: [
