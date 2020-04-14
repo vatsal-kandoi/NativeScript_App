@@ -14,6 +14,8 @@ import { PreviousComponent } from "./default/auth/previous/previous.component";
 import { AuthComponent } from "./default/auth/auth.component";
 import { DashboardComponent } from "./user/dashboard/dashboard.component";
 import { InfobarComponent } from "./user/shared/infobar/infobar.component"
+import { EditComponent } from "./user/edit/edit.component" 
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
     bootstrap: [
@@ -23,6 +25,7 @@ import { InfobarComponent } from "./user/shared/infobar/infobar.component"
         NativeScriptModule,
         AppRoutingModule,
         NativeScriptFormsModule,
+        ReactiveFormsModule,
         NativeScriptHttpClientModule
     ],
     declarations: [
@@ -36,7 +39,8 @@ import { InfobarComponent } from "./user/shared/infobar/infobar.component"
         PreviousComponent,
         AuthComponent,
         DashboardComponent,
-        InfobarComponent
+        InfobarComponent,
+        EditComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
