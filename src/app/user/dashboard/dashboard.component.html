@@ -1,4 +1,10 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true">
+        <Page.actionBar class="bar" [ngClass]="{'purple': index == 0, 'white':index !=0}">
+            <ActionBar flat="true" [ngClass]="{'purple': index == 0, 'white':index !=0}">
+                <Infobar></Infobar>
+            </ActionBar>
+          </Page.actionBar>
+    
     <!--- Instructor -->
 <Navbar></Navbar>
 </Page>

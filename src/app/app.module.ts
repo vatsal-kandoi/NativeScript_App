@@ -5,7 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { NativeScriptFormsModule, NativeScriptHttpClientModule } from "nativescript-angular";
 import { NavbarComponent } from "./user/shared/navbar/navbar.component";
-import { BrowseComponent } from "./user/browse/browse.component";
+import { SettingsComponent } from "./user/settings/settings.component";
 import { HomeComponent } from "./user/home/home.component";
 import { LandingComponent } from './default/landing/landing.component';
 import { UserAuthComponent } from './default/auth/auth/auth.component';
@@ -13,6 +13,7 @@ import { SelectorComponent } from "./default/auth/selector/selector.component";
 import { PreviousComponent } from "./default/auth/previous/previous.component";
 import { AuthComponent } from "./default/auth/auth.component";
 import { DashboardComponent } from "./user/dashboard/dashboard.component";
+import { InfobarComponent } from "./user/shared/infobar/infobar.component"
 
 @NgModule({
     bootstrap: [
@@ -27,14 +28,15 @@ import { DashboardComponent } from "./user/dashboard/dashboard.component";
     declarations: [
         AppComponent,
         NavbarComponent,
-        BrowseComponent,
+        SettingsComponent,
         HomeComponent,
         LandingComponent,
         UserAuthComponent,
         SelectorComponent,
         PreviousComponent,
         AuthComponent,
-        DashboardComponent
+        DashboardComponent,
+        InfobarComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

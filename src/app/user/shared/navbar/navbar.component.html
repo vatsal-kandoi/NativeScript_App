@@ -1,4 +1,4 @@
-<BottomNavigation class="navbar" #nav>
+<BottomNavigation class="navbar" (selectedIndexChanged)="change($event)" #nav>
     <TabStrip class="navbar">
         <TabStripItem class="navigation__item">
             <Label text="Home"></Label>
@@ -23,6 +23,6 @@
     </TabContentItem>
 
     <TabContentItem>
-        <Browse></Browse>
+        <Settings></Settings>
     </TabContentItem>
 </BottomNavigation>
