@@ -1,0 +1,11 @@
+  <FlexboxLayout *ngIf="!selected" width="100%" justifyContent="space-between" height="100%" flexDirection="column">
+    <FlexboxLayout width="100%" flexDirection="column" class="inner">
+      <Image src="res://landing" class="image" ></Image>
+      <Label text="Improve the way you learn" class="entry-text-header" textWrap="true" textAlignment="center" lineHeight="5"></Label>
+      <Label text="We aim to help your students learn their way" class="entry-text" textWrap="true" textAlignment="center" lineHeight="5"></Label>
+    </FlexboxLayout>
+    <DockLayout>
+      <Button text="Get started" Dock="bottom" alignSelf="flex-end" class="button"></Button>
+    </DockLayout>
+  </FlexboxLayout>
+  <Auth *ngIf="selected"></Auth>

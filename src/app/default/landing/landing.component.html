@@ -1,0 +1,14 @@
+<!-- Only if not opened previously-->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true">
+    <!-- Get started UI  -->
+  <FlexboxLayout width="100%" justifyContent="space-between" height="100%" flexDirection="column">
+    <FlexboxLayout width="100%" flexDirection="column" class="inner">
+      <Image src="res://landing" class="image" ></Image>
+      <Label text="Improve the way you learn" class="entry-text-header" textWrap="true" textAlignment="center" lineHeight="5"></Label>
+      <Label text="We aim to help your students learn their way" class="entry-text" textWrap="true" textAlignment="center" lineHeight="5"></Label>
+    </FlexboxLayout>
+    <DockLayout>
+      <Button (onTap)="nav()" text="Get started" Dock="bottom" alignSelf="flex-end" class="button"></Button>
+    </DockLayout>
+  </FlexboxLayout>
+</Page>
