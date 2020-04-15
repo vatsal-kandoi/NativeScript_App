@@ -15,6 +15,7 @@ import { AuthComponent } from "./default/auth/auth.component";
 import { DashboardComponent } from "./user/dashboard/dashboard.component";
 import { InfobarComponent } from "./user/shared/infobar/infobar.component"
 import { EditComponent } from "./user/edit/edit.component" 
+import { EditUserComponent } from "./user/edit/editUser/edit.component" 
 import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
@@ -40,7 +41,8 @@ import { ReactiveFormsModule } from "@angular/forms";
         AuthComponent,
         DashboardComponent,
         InfobarComponent,
-        EditComponent
+        EditComponent,
+        EditUserComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

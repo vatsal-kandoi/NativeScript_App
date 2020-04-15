@@ -1,4 +1,8 @@
-<ScrollView orientation="vertical">
+<ScrollView *ngIf="true" orientation="vertical">
+    <EditUser></EditUser>
+</ScrollView>
+<ScrollView *ngIf="false" orientation="vertical">
+    <!-- Instructor -->
     <FlexboxLayout *ngIf="editMode==false" width="100%" flexDirection="column" alignItems="flex-start">
         <FlexboxLayout class="search" alignItems="flex-start" flexDirection="row">
             <Image src="font://&#xf067;" class="fas t-36 icon" (tap)="add()" ></Image>
@@ -27,14 +31,14 @@
                 <TextField [(ngModel)]="nameInput" borderWidth="0" class="input" hint="Add to course" ></TextField>
             </FlexboxLayout>
             <FlexboxLayout class="option-enc" *ngFor="let search of searches">
-                <FlexboxLayout class="option" (swipe)="onSwipe($event)" tap="show()" flexDirection="row">
+                <FlexboxLayout class="option" flexDirection="row">
                     <Label class="option-txt" text="{{ search }}" ></Label>
                 </FlexboxLayout>
             </FlexboxLayout>
         </FlexboxLayout>
-        <FlexboxLayout *ngIf="editName == 'search'">
-            <FlexboxLayout class="option-enc" *ngFor="let search of searches">
-                <FlexboxLayout class="option" (swipe)="onSwipe($event)" tap="show()" flexDirection="row">
+        <FlexboxLayout flexDirection="column" *ngIf="editName == 'search'">
+            <FlexboxLayout flexDirection="column" class="option-enc" *ngFor="let search of searches">
+                <FlexboxLayout class="option" flexDirection="column">
                     <Label class="option-txt" text="{{ search }}" ></Label>
                 </FlexboxLayout>
             </FlexboxLayout>

@@ -1,0 +1,61 @@
+<FlexboxLayout width="100%" flexDirection="column">
+    <FlexboxLayout *ngIf="!editMode" width="100%" flexDirection="column" alignItems="flex-start">
+        <FlexboxLayout flexDirection="row" flexWrap="wrap" width="100%" alignItems="center" justifyContent="center">
+            <FlexboxLayout (tap)="select('course')" class="choose choose-1">
+                <Label text="Course"></Label>
+                <Label text="200" class="number"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout (tap)="select('search')" class="choose">
+                <Label text="Searches"></Label>
+                <Label text="200" class="number"></Label>
+            </FlexboxLayout>
+        </FlexboxLayout>
+        <FlexboxLayout flexDirection="column" *ngIf="editName == 'course'">
+            <FlexboxLayout class="option-enc" *ngFor="let search of searches">
+                <FlexboxLayout class="option" (swipe)="onSwipe($event)" tap="show()" flexDirection="row">
+                    <Label class="option-txt" text="{{ search }}" ></Label>
+                </FlexboxLayout>
+            </FlexboxLayout>
+        </FlexboxLayout>
+        <FlexboxLayout flexDirection="column" *ngIf="editName == 'search'">
+            <FlexboxLayout class="search" alignItems="flex-start" flexDirection="column">
+                <TextField [(ngModel)]="nameInput" class="input" hint="The sky is blue" ></TextField>
+                <FlexboxLayout class="buttons" alignItems="flex-start" flexDirection="row">
+                    <GridLayout class="icon-enc">
+                        <Image src="font://&#xf002;" class="fas t-36 icon" (tap)="add()" ></Image>
+                    </GridLayout>
+                    <GridLayout class="icon-enc">
+                        <Image src="font://&#xf093;" class="fas t-36 icon" (tap)="add()" ></Image>
+                    </GridLayout>
+                    <GridLayout class="icon-enc">
+                        <Image src="font://&#xf130;" class="fas t-36 icon" (tap)="add()" ></Image>
+                    </GridLayout>
+                </FlexboxLayout>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" class="option-enc" *ngFor="let search of searches">
+                <FlexboxLayout class="option" (swipe)="onSwipe($event)" tap="show()" flexDirection="row">
+                    <Label class="option-txt" text="{{ search }}" ></Label>
+                </FlexboxLayout>
+            </FlexboxLayout>
+        </FlexboxLayout>
+    </FlexboxLayout>
+    <FlexboxLayout *ngIf="editMode" width="100%" flexDirection="column" alignItems="flex-start">
+        <FlexboxLayout alignItems="center" justifyContent="center" flexDirection="row" width="100%">
+            <GridLayout class="icon-enc back" (tap)="back($event)">
+                <Image src="font://&#xf060;" class="fas t-36 icon" ></Image>
+            </GridLayout>
+            <GridLayout class="icon-enc">
+                <Image src="font://&#xf04b;" class="fas t-36 icon" (tap)="add()" ></Image>
+            </GridLayout>
+            <GridLayout class="icon-enc">
+                <Image src="font://&#xf04c;" class="fas t-36 icon" (tap)="add()" ></Image>
+            </GridLayout>
+        </FlexboxLayout>
+        <!-- <FlexboxLayout>
+            <Image></Image>
+        </FlexboxLayout>
+        <FlexboxLayout>
+            <Label></Label>
+        </FlexboxLayout> -->
+    </FlexboxLayout>
+</FlexboxLayout>
