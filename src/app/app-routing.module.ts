@@ -10,13 +10,13 @@ import { UserAuthComponent } from "./default/auth/auth/auth.component";
 import { DashboardComponent } from "./user/dashboard/dashboard.component";
 
 const routes: Routes = [
-    // { path: "", component: LandingComponent },
+    { path: "", component: LandingComponent },
 /** Auth routes */
     { path: "auth", component: AuthComponent},
     { path: "previous", component: PreviousComponent},
     { path: "select", component: SelectorComponent},
     { path: "login", component: UserAuthComponent},
-    { path: "", component: DashboardComponent }
+    { path: "dashboard", component: DashboardComponent }
 ];
 
 @NgModule({
