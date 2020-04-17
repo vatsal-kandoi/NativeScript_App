@@ -1,0 +1,1 @@
+Incomplete Nativescript+Angular App for a learning Platform. Integration with Backend and proper authentication routing left
